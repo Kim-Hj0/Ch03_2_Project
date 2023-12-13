@@ -60,8 +60,8 @@ public class DepositManager : MonoBehaviour
         }
     }
 
-    //private string GetCustomAmountInput()
-    //{
+    private string GetCustomAmountInput()
+    {
     //    string customAmountText = customAmountInputField.Text;
     //    if (float.TryParse(customAmountText, out float customAmount))
     //    {
@@ -72,8 +72,8 @@ public class DepositManager : MonoBehaviour
     //        Debug.LogError("Invalid custom amount input!");
 
     //    }
-    //        return "입력한 금액";
-    //}
+            return "입력한 금액";
+    }
 
     public void DepositCustomAmount(string customAmountText)
     {
