@@ -60,20 +60,20 @@ public class DepositManager : MonoBehaviour
         }
     }
 
-    private string GetCustomAmountInput()
-    {
-        string customAmountText = customAmountInputField.Text;
-        if (float.TryParse(customAmountText, out float customAmount))
-        {
-            DepositAmount(customAmount);
-        }
-        else
-        {
-            Debug.LogError("Invalid custom amount input!");
+    //private string GetCustomAmountInput()
+    //{
+    //    string customAmountText = customAmountInputField.Text;
+    //    if (float.TryParse(customAmountText, out float customAmount))
+    //    {
+    //        DepositAmount(customAmount);
+    //    }
+    //    else
+    //    {
+    //        Debug.LogError("Invalid custom amount input!");
 
-        }
-            return "입력한 금액";
-    }
+    //    }
+    //        return "입력한 금액";
+    //}
 
     public void DepositCustomAmount(string customAmountText)
     {
