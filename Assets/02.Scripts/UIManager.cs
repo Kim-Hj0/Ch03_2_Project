@@ -15,10 +15,15 @@ public class UIManager : MonoBehaviour
     //금액이 부족합니다 창.
     [SerializeField] GameObject popupError;
 
+    string FormatNumber(int num)   //숫자에 ,(쉼표) 를 넣으려면. 천의 자리마다 콤마 찍기.
+    {
+        return string.Format("{0:N0}", num);
+    }
+
     void Refresh()  //금액을 다시 표현해줄테는 이 함수 사용.
     {
-        cashTxt.text = MoneyManager.instance.userData.cash.ToString();  //유저 데이터에 접근해서 cash 접근해서 
-        balanceTxt.text = MoneyManager.instance.userData.balance.ToString();
+        cashTxt.text = FormatNumber(MoneyManager.instance.userData.cash);  //유저 데이터에 접근해서 cash 접근해서 
+        balanceTxt.text = FormatNumber(MoneyManager.instance.userData.balance);
     }
 
 
